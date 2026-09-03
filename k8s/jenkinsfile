@@ -150,15 +150,15 @@ pipeline {
                         echo "Updating image tags to: ${BUILD_TAG}"
                         
                         # Update Vote manifest
-                        sed -i "s|image: praveen1905/voting-app-vote:.*|image: praveen1905/voting-app-vote:${BUILD_TAG}|g" \
+                        sed -i "s|image: praveenkumar2204/voting-app-vote:.*|image: praveenkumar2204/voting-app-vote:${BUILD_TAG}|g" \
                             k8s/vote/vote-deployment.yaml
                         
                         # Update Worker manifest
-                        sed -i "s|image: praveen1905/voting-app-worker:.*|image: praveen1905/voting-app-worker:${BUILD_TAG}|g" \
+                        sed -i "s|image: praveenkumar2204/voting-app-worker:.*|image: praveenkumar2204/voting-app-worker:${BUILD_TAG}|g" \
                             k8s/worker/worker-deployment.yaml
                         
                         # Update Result manifest
-                        sed -i "s|image: praveen1905/voting-app-result:.*|image: praveen1905/voting-app-result:${BUILD_TAG}|g" \
+                        sed -i "s|image: praveenkumar2204/voting-app-result:.*|image: praveenkumar2204/voting-app-result:${BUILD_TAG}|g" \
                             k8s/result/result-deployment.yaml
                         
                         echo "Updated manifests:"
