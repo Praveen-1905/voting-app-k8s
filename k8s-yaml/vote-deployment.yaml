@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: vote
-        image: praveen1905/voting-app-vote:2
+        image: praveenkumar2204/voting-app-vote:2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
