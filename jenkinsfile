@@ -102,9 +102,9 @@ pipeline {
             steps {
                 echo 'Updating Kubernetes Manifests'
                 sh """
-                    sed -i 's|denish952/voting-app-vote:.*|denish952/voting-app-vote:${BUILD_NUM}|g' k8s-yaml/vote-deployment.yaml
-                    sed -i 's|denish952/voting-app-worker:.*|denish952/voting-app-worker:${BUILD_NUM}|g' k8s-yaml/worker-deployment.yaml
-                    sed -i 's|denish952/voting-app-result:.*|denish952/voting-app-result:${BUILD_NUM}|g' k8s-yaml/result-deployment.yaml
+                    sed -i 's|praveenkumar2204/voting-app-vote:.*|praveenkumar2204/voting-app-vote:${BUILD_NUM}|g' k8s-yaml/vote-deployment.yaml
+                    sed -i 's|praveenkumar2204/voting-app-worker:.*|praveenkumar2204/voting-app-worker:${BUILD_NUM}|g' k8s-yaml/worker-deployment.yaml
+                    sed -i 's|praveenkumar2204/voting-app-result:.*|praveenkumar2204/voting-app-result:${BUILD_NUM}|g' k8s-yaml/result-deployment.yaml
                     echo "Manifests updated with Build: ${BUILD_NUM}"
                     grep image: k8s-yaml/vote-deployment.yaml
                     grep image: k8s-yaml/worker-deployment.yaml
